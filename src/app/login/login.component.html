@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Student Login</h1>
+            <h6>Feel Free to Login</h6><hr>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-7">
+              <label for="username">Email</label><br>
+              <input fromControlName="email" type="text" id="username" name="username" required>
+            </div>
+            <br>
+            <div class="mb-7">
+              <label for="password">password</label><br>
+              <input fromControlName="password" type="password" id="password" name="password" required>
+            </div>
+            <br>
+            <button type="submit" class="btn-btn-primary mx-2">Login</button>
+          </form><br>
+          <a style="color: #fff; margin-top:5px" routerLink="/signup"> New User?  Click to Signup!</a>
+        </div>
+      </div>
+    </div>
+</div>
+

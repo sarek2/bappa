@@ -1,0 +1,69 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sharek",
+      "email": "kamrulislamsharek.cse.rmstu@gmail.com", 
+      "mobile": "015330345456",
+      "city": "Cox'sbazar"
+    },
+    {
+      "id": 2,
+      "name": "Tanjila",
+      "email": "tanjila@gmial.com",
+      "mobile": "01891648464",
+      "city": "Barishal"
+    },
+    {
+      "id": 3,
+      "name": "Sharon",
+      "email": "sharon@gmail.com",
+      "mobile": "018497597549",
+      "city": "GAIBANDHA"
+    },
+    {
+      "id": 4,
+      "name": "Deepika ",
+      "email": "deepika@gmail.com",
+      "mobile": "01848745857585",
+      "city": "Dhaka"
+    },
+    {
+      "id": 5,
+      "name": "Tojibul",
+      "email": "tojib@gmail.com",
+      "mobile": "0187497595598",
+      "city": "Rajshashi"
+    }
+  ],
+  "signupUsers": [
+    {
+      "id": 1,
+      "name": "sayed",
+      "email": "sayed@gmail.com",
+      "mobile": "0189456777",
+      "city": "Dhaka"
+    },
+    {
+      "id": 2,
+      "name": "rasel",
+      "email": "if@gmail.com",
+      "mobile": "01111111111111",
+      "city": "Barishal"
+    },
+    {
+      "id": 3,
+      "name": "Sayeda Tanjial",
+      "email": "tanjila@gmail.com",
+      "mobile": "0178749494",
+      "city": "dhaka"
+    },
+    {
+      "id": 4,
+      "name": "Sayed rasel",
+      "email": "sayed@gmail.com",
+      "mobile": "017873653787",
+      "city": "Rangamati"
+    }
+  ]
+}

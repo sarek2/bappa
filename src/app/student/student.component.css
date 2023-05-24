@@ -1,0 +1,35 @@
+.card{
+
+    border: none;
+    width:1100px;
+    height:900px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg,hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1)100%);
+    text-align: center;
+
+}
+.card h2,
+h6{
+    color: #fff;
+}
+label{
+    color: #fff;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

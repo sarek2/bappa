@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card">
+              <div class="text-center">
+                <h2 style= "color: #fff; margin-top:5px; font-size:35px" class="text-light primary py-3">Student Management System</h2>
+                  <hr>
+                  <div class="d-flex" style="background: linear-gradient(90deg,hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1)100%); color: white; padding: 15px 32px;font-size: 10px">
+                    <button style="font-size: 20px text-align=right" class="btn btn-success"(click)="add()" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Student</button>&nbsp;&nbsp;
+                    <button style="font-size: 20px" class="btn btn-warning">Logout</button>
+                  </div>
+              </div>&nbsp;
+
+              <!---table-->
+                      <table style="color: white; padding: 15px 32px;font-size: 15px">
+                        <thead>
+                            <tr>
+                                <th class="text-center" [style]="{'width':'5%','font-size':'25px'}" scope="col">S.id</th>&nbsp;
+                                <th [style]="{'width':'15%','font-size':'25px'}" scope="col">Name</th>&nbsp;
+                                <th [style]="{'width':'20%','font-size':'25px'}" scope="col">Email</th>&nbsp;
+                                <th [style]="{'width':'15%','font-size':'25px'}" scope="col">Mobile</th>&nbsp;
+                                <th [style]="{'width':'10%','font-size':'25px'}" scope="col">City</th>&nbsp;
+                                <th class="text-center" [style]="{'width':'35%','font-size':'25px'}"scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of allstudentdata">
+                              <td [style]="{'width':'5%','font-size':'20px'}">{{data.id}}</td>&nbsp;
+                              <td [style]="{'width':'15%','font-size':'20px'}">{{data.name}}</td>&nbsp;
+                              <td [style]="{'width':'20%','font-size':'20px'}">{{data.email}}</td>&nbsp;
+                              <td [style]="{'width':'15%','font-size':'20px'}">{{data.mobile}}</td>&nbsp;
+                              <td [style]="{'width':'10%','font-size':'20px'}">{{data.city}}</td>&nbsp;
+                              <td [style]="{'width':'35%','font-size':'20px'}">
+                                  <button style="font-size: 20px" class="btn btn-info" (click)="edit(data)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                                  <button  style="font-size: 20px"class="btn btn-warning" (click)="deletestudent(data)">Delete</button>
+                              </td>
+                            </tr>
+                      </table>
+    </div>
+      </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: blue;" class="modal-header">
+          <h5 style ="color: aliceblue; font-size: 26px;margin-left: 62px;font-weight:620;" class="modal-title" id="exampleModalLabel">Student Management System</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class=""><br>
+              <label style="color:black !important" for="exampleInputEmail1">Name</label>
+              <input class="form-control" type="name" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+              <small *ngIf="formValue.get('name')?.invalid && formValue.get('name')?.touched"class="text-danger">Name is Required</small>
+              
+            </div>
+            <div class="form-group"><br>
+              <label style="color:black !important" for="exampleInputEmail1">Email address</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small *ngIf="formValue.get('email')?.invalid && formValue.get('email')?.touched"class="text-danger">Email Name is Required</small>
+
+            </div>
+            <div class="form-group"><br>
+              <label  for="exampleInputEmail1" style="color:black !important">Mobile </label>
+              <input type="mobile" formControlName="mobile" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Mobile Number">
+              <small *ngIf="formValue.get('mobile')?.invalid && formValue.get('mobile')?.touched"class="text-danger">Mobile Number is Required</small>
+
+            </div>
+            <div class="form-group"><br>
+              <label style="color:black !important" for="exampleInputEmail1">City</label>
+              <input type="email" formControlName="city" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter City">
+              <small *ngIf="formValue.get('city')?.invalid && formValue.get('city')?.touched"class="text-danger">City Name is Required</small>
+            </div>
+          </form>
+        </div>
+
+        <div style="background: blue;"class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="showadd" type="button" (click)="addStudent()"class="btn btn-success">Add</button>
+          <button type="button" (click)="resetForm()">Reset</button>
+          <button *ngIf="showupdate" type="button" (click)="update()" class="btn btn-success" >Update</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
